@@ -4,6 +4,13 @@
  * [1235] 规划兼职工作
  */
 
+//动态规划
+//把工作完成时间排序
+//使用 dp[i] 表示前 i 份兼职工作可以获得的最大报酬
+//根据第 i−1 份兼职工作是否被选择
+
+
+
 // @lc code=start
 class Solution {
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
@@ -27,7 +34,7 @@ class Solution {
     public int search(int[][] jobs,int right,int target){
         int left=0;
         while(left<right){
-            int mid=left+(right-left)/2;
+            int mid=(right+left)/2;
             if(jobs[mid][1]>target){
                 right=mid;
                 
